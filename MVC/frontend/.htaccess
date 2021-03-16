@@ -1,0 +1,21 @@
+# frontend/.htaccess
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule trang-chu.html index.php?controller=home&action=index
+RewriteRule ca-canh.html index.php?controller=product&action=getfish
+RewriteRule be-ca.html index.php?controller=product&action=getaqru
+RewriteRule phu-kien.html index.php?controller=product&action=getaccessories
+RewriteRule tin-tuc.html index.php?controller=new&action=index
+RewriteRule tin-tuc/(.*)/([0-9]{1,}).html index.php?controller=new&action=detail&title=$1&id=$2
+RewriteRule lien-he.html index.php?controller=home&action=contact
+RewriteRule gio-hang-cua-ban.html index.php?controller=cart&action=index
+RewriteRule san-pham/(.*)/([0-9]{1,}).html index.php?controller=product&action=detail&title=$1&id=$2
+RewriteRule xoa-san-pham/([0-9]{1,}).html index.php?controller=cart&action=delete&id=$1
+RewriteRule thanh-toan.html index.php?controller=payment&action=index
+RewriteRule dang-nhap.html index.php?controller=login&action=login
+RewriteRule dang-ky.html index.php?controller=login&action=register
+RewriteRule dang-xuat.html index.php?controller=login&action=logout
+RewriteRule cam-on.html index.php?controller=payment&action=thank
+RewriteRule thanh-toan-online.html index.php?controller=payment&action=online
